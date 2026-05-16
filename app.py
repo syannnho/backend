@@ -92,7 +92,7 @@ limiter = Limiter(
     app=app,
     default_limits=['200 per hour', '60 per minute'],
     storage_uri=REDIS_URL if REDIS_URL else 'memory://',
-    strategy='fixed-window-elastic-expiry',
+    # strategy default = fixed-window, support semua storage
 )
 
 # ─── DATABASE ──────────────────────────────────────────────────────────────────
